@@ -17,4 +17,4 @@ class MyStoreScreen {
     }
 }
 
-module.exports = new HomeScreen()
+module.exports = new MyStoreScreen()

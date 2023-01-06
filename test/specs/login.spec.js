@@ -6,7 +6,7 @@ let urlLoja = 'http://lojaebac.ebaconline.art.br/'
 let usuario = 'gerente'
 let senha = 'GD*peToHNJ1#c$sgk08EaYJQ'
 
-describe('Access Admin Panel', () => {
+describe('Acessar Admin Panel', () => {
     it('shoud login with valid credentials', async () => {
         await homeScreen.goToLogin()
         await loginScreen.setStoreAddress(urlLoja)

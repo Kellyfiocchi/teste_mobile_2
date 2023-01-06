@@ -9,7 +9,7 @@ class LoginScreen {
 
     get #password() { return $('android=new UiSelector().text("Password")')}
 
-    get #twoFactorPasswordBtn() { return $('login_enter_password') }
+    get #twoFactorPasswordBtn() { return $('id:login_enter_password') }
 
     async setStoreAddress(url) {
         this. #storeAddress.setValue(url)
@@ -19,7 +19,7 @@ class LoginScreen {
        await this.#continue.click()
     }
 
-    async continue() {
+    async continueWithStoreCredentials() {
         await this.#continueWithStoreCredentials.click()
     }
 
@@ -39,4 +39,4 @@ class LoginScreen {
     }
 }
 
-module.exports = new LoginScreen
+module.exports = new LoginScreen()
