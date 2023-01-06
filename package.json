@@ -1,0 +1,29 @@
+{
+  "name": "teste_mobile_2",
+  "version": "1.0.0",
+  "description": "Projeto de Testes EBAC Mobile",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx wdio run ./wdio.conf.js",
+    "wdio": "wdio run ./wdio.conf.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kellyfiocchi/teste_mobile_2.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Kellyfiocchi/teste_mobile_2/issues"
+  },
+  "homepage": "https://github.com/Kellyfiocchi/teste_mobile_2#readme",
+  "dependencies": {
+    "@wdio/cli": "^8.1.2"
+  },
+  "devDependencies": {
+    "@wdio/appium-service": "^8.1.2",
+    "@wdio/local-runner": "^8.1.2",
+    "@wdio/mocha-framework": "^8.1.2",
+    "@wdio/spec-reporter": "^8.1.2"
+  }
+}
