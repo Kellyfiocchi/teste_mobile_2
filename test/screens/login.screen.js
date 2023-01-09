@@ -10,6 +10,8 @@ class LoginScreen {
     get #password() { return $('android=new UiSelector().text("Password")')}
 
     get #twoFactorPasswordBtn() { return $('id:login_enter_password') }
+    
+
 
     async setStoreAddress(url) {
         this. #storeAddress.setValue(url)
@@ -33,7 +35,7 @@ class LoginScreen {
         await this.#twoFactorPasswordBtn.click()
     }
 
-    async twoFactorLogin(password){
+    async twoFactorLogin(password) {
         await this.#password.setValue(password)
         await this.#continue.click()
     }
