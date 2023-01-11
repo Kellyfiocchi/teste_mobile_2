@@ -6,9 +6,9 @@ exports.config = {
 //hostname: 'localhost',
     //port: 4723,
    // path: '/wd/hub',
-    user: "kellyfiochi_qfYJeF",
-    key: " pLCkEkK2wP9M1svFtgrz",
-
+   'browserstack.user' : 'kellyfiochi_qfYJeF',
+   'browserstack.key' : 'pLCkEkK2wP9M1svFtgrz',
+ 
   //services: ['appium'],
   services: ['browserstack'],
 
@@ -22,6 +22,7 @@ exports.config = {
        // "appium:deviceName": "ebac-qe",
        // "appPackage": "com.woocommerce.android",
         //"appium:automationName": "UiAutomator2",
+         "app": join(process.cwd(), './app/android/loja-ebac.apk'),
         //"appActivity": "ui.main.MainActivity",
        // "appWaitActivity": "com.woocommerce.android.ui.login.LoginActivity"
 
@@ -70,9 +71,9 @@ exports.config = {
                 })
             })
         },
-        afterStep: async function (step, scenario, { error, duration, passed }, context) {
-              driver.takeScreenshot();
-            
-          }
-
-}
+        afterStep: function (test, scenario, { error, duration, passed }) {
+            if (error) {
+                driver.takeScreenshot()
+            }
+        }
+    }
